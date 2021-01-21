@@ -1,0 +1,9 @@
+.Weather {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.temp {
+    font-size: 64px;
+}

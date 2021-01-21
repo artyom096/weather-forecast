@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import classes from './App.module.css';
+import Days from './components/Days/Weather';
+import Header from './components/Header/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    day: { day: new Date().getDay(), temp: '+24', dateDay: new Date().getDate(), dateMonth: new Date().getMonth() }
+  }
+
+  render() {
+    return (
+      <div className={classes.App}>
+        <Header day={this.state.day}  />
+        <Days />
+      </div>
+    );
+  }
 }
 
 export default App;
