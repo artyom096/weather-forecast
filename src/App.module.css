@@ -3,5 +3,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 500px;
-    height: 250px;
+}
+
+.select {
+    margin: 10px;
+    font-size: 18px;
 }
